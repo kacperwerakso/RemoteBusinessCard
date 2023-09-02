@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="files/favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="punycode.js"></script>
+    <title>Curiosity</title>
+</head>
+<body class="body">
+    <div class="menu">
+        <nav>
+            <button class="btnmenu">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times hide"></i>
+            </button>
+            <ul class="navul">
+                <br><br><li><a class="menutext1"><p>Generator</p></a></li><br>
+                <li><a href="QrCode.html" class="menutext"><p>Kodów QR</p></a></li>
+                <li><a href="genPass.html" class="menutext"><p>Haseł</p></a></li>
+                <li><a href="genColor.html" class="menutext"><p>Kolorów</p></a></li>
+                <li><a href="quote.html" class="menutext"><p>Cytatów</p></a></li>
+                <li><a href="curiosity.html" class="menutext"><p>Ciekawostek</p></a></li><hr class="hrDarkMode">
+                <li><a class="menutext1"><p>Kalkulator</p></a></li><br>
+                <li><a href="Calculator.html" class="menutext"><p>Standardowy</p></a></li>
+                <li><a href="bmi.html" class="menutext"><p>BMI</p></a></li>
+                <li><a href="kcal.html" class="menutext"><p>Zapotrzebowania kcal</p></a></li>
+                <li><a href="temp.html" class="menutext"><p>Stopni</p></a></li>
+                <li><a href="sizes.html" class="menutext"><p>Miary</p></a></li><hr class="hrDarkMode">
+                <li><a class="menutext1"><p>Finanse</p></a></li><br>
+                <li><a href="currency.html" class="menutext"><p>Waluty</p></a></li>
+                <li><a href="KryptoCurrency.html" class="menutext"><p>Kryptowaluty</p></a></li><hr class="hrDarkMode">
+                <li><a class="menutext1"><p>Różne</p></a></li><br>
+                <li><a href="weather.html" class="menutext"><p>Pogoda</p></a></li>
+                <li><a href="map.html" class="menutext"><p>Mapa</p></a></li><br>
+            </ul>
+        </nav>
+        <div>
+            <a href="mainPage.html" class="housebtn"><i class="fa-solid fa-house"></i></a>
+
+        </div>
+        <div>
+            <button class="darkMode">
+                <i class="fas fa-circle-half-stroke"></i>
+            </button>
+        </div>
+        <div>
+
+        </div>
+        <div>
+            <button id="translateButton"><img class="flag" src="./images/usa.png"></button>
+        </div>
+        <div class="hello">
+            <p>Kacper Werakso</p>
+        </div>
+    </div><br><br><br><br><br>
+
+        <div class="WeatherAll">
+            <p class="WeatherTitle">Wygeneruj losową ciekawostę</p><br>
+                    <button class="buttonWeather" onclick="generateRandomCuriosity()"><p>Generuj</p></button><br><br><br>
+                    <p class="warning"></p>
+
+                    <p class="randomCuriosity"></p><br><br>
+
+
+        </div><br><br><br><br><br><br><br><br><br><br><br>
+
+
+        
+        
+
+
+        <div class="footer">
+            <p class="footerText">© 2023 Kacper Werakso</p>
+        </div>
+
+        <script src="script.js"></script>
+        <script>
+            const randomCuriosity = document.querySelector('.randomCuriosity')
+
+        const facts = [
+            "Najmniejszy kość ludzkiego to strzemiączko w uchu, ma około 0,1 cm długości.",
+            "Kleopatra VII była bardziej starożytna od piramid w Gizie.",
+            "Długość dna oceanów jest większa niż suma wszystkich lądów na Ziemi.",
+            "Orka potrafi spać tylko jedną półkulą mózgową na raz.",
+            "Największym producentem bananów na świecie jest Indie, a nie Ameryka Łacińska.",
+            "Wszystkie cyfry na kalkulatorze w telefonie komórkowym są ułożone tak samo jak na kalkulatorze naukowym.",
+            "Wszystkie kangury są leworęczne.",
+            "Wielkość populacji mrówek na świecie jest większa od ludzkiej populacji.",
+            "Okręty podwodne używają morskich zwierząt jako punktów orientacyjnych, by wybrać najdogodniejszą trasę.",
+            "Elektroencefalografia (EEG) może zarejestrować aktywność mózgu przy użyciu elektrod na głowie.",
+            "Świnie są bardziej inteligentne niż psy, a ich pamięć może sięgać kilku lat wstecz.",
+            "Pluton został zdegradowany z rangi planety do statusu planety karłowatej w 2006 roku.",
+            "Wenus ma dłuższy dzień niż rok, obracając się wokół własnej osi wolniej niż przemieszcza się wokół Słońca.",
+            "Większość bambusa kwitnie tylko raz na kilkadziesiąt lat.",
+            "Język flaminga jest biały, ale ich pożywienie nadaje mu różowy kolor.",
+            "Wiatraki były wykorzystywane jako źródło energii już w starożytności.",
+            "Astronauta Chris Hadfield wykonał pierwszy akustyczny koncert w kosmosie, grając na gitarze na Międzynarodowej Stacji Kosmicznej.",
+            "Ludzkie DNA ma około 98% podobieństwa do DNA szympansów.",
+            "Właściciel Microsoft, Bill Gates, zjada na lunch zwykły hamburger, nie używa karty kredytowej i nie ma zegarka.",
+            "Wśród wszystkich zwierząt na Ziemi, żółwie mają najdłuższe życie.",
+            "Lodowiec na Antarktydzie o nazwie Lambert Glacier jest największym lodowcem na Ziemi, mając powierzchnię porównywalną do stanu Wirginia.",
+            "Foka potrafi zanurkować na głębokość ponad 700 metrów.",
+            "Chemia jest obecna w smaku deszczu, który zawiera kwas azotowy.",
+            "Biała rekinia krew jest cieplejsza niż reszta jej ciała, co pomaga w zachowaniu temperatury ciała w chłodnych wodach.",
+            "Koń może spać zarówno stojąc, jak i leżąc.",
+            "Największy istniejący owad to pałąk olbrzymi, osiągający rozpiętość skrzydeł do 30 cm.",
+            "Język flaminga jest odwrócony - bardziej przypomina ten z tytułu.",
+            "Niektóre gatunki modliszek potrafią obracać głowę o 180 stopni.",
+            "Rozmiar Księżyca zmniejsza się, ponieważ oddala się od Ziemi o około 3,8 centymetra rocznie.",
+            "Ludzki mózg jest jednym z najbardziej energochłonnych narządów ciała, zużywając około 20% całkowitej energii organizmu.",
+            "Największy pająk na świecie, ptasznik Goliath, może osiągnąć rozmiar do 30 cm.",
+            "Język wielorybów jest na tyle duży, że może ważyć tyle co słonie.",
+            "Indyjska Księga Rekordów Guinessa ma własną Księgę Rekordów Guinessa, zarejestrowaną jako największa ilość ludzi jednocześnie malujących paznokcie.",
+            "Albert Einstein nigdy nie otrzymał Nagrody Nobla za teorię względności, tylko za wyjaśnienie efektu fotoelektrycznego.",
+            "W sumie, na całym świecie istnieje około 1 500 aktywnych wulkanów.",
+            "Dzieci urodzone z niebieskimi oczami to na początku zazwyczaj albinosy, których kolor oczu może się później zmienić.",
+            "Kosmos jest pustką, ale między gwiazdami znajduje się również pył kosmiczny i gaz, nazywany gazem międzygwiazdowym.",
+            "Tylko 10% wszystkich komórek w ludzkim ciele jest rzeczywiście ludzkich - reszta to bakterie, wirusy i inne mikroorganizmy.",
+            "Japoński miecz katana jest znany z wyjątkowej ostrości, a proces jego produkcji wymaga wielu skomplikowanych etapów.",
+            "Najwyższym nagraniem dźwięku, jakie kiedykolwiek zarejestrowano, był wystrzał pistoletu w pobliżu mikrofonu na szczycie Mount Everest.",
+            "Wenus to jedyna planeta w Układzie Słonecznym, która krąży w kierunku przeciwnym do ruchu wskazówek zegara.",
+        ]
+
+        function generateRandomCuriosity() {
+            const randomQuoteElement = document.querySelector('.randomCuriosity');
+            const randomNumber = Math.floor(Math.random() * facts.length);
+            randomQuoteElement.innerHTML = facts[randomNumber];
+        }
+
+        </script>
+        
+        <script src="https://kit.fontawesome.com/34c494935b.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+        
+    
+    </body>
+</html>

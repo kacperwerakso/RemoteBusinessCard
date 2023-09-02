@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="files/favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <title>Currencies</title>
+</head>
+<body class="body">
+    <div class="menu">
+        <nav>
+            <button class="btnmenu">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times hide"></i>
+            </button>
+            <ul class="navul">
+                <br><br><li><a class="menutext1"><p>Generator</p></a></li><br>
+                <li><a href="QrCode.html" class="menutext"><p>Kodów QR</p></a></li>
+                <li><a href="genPass.html" class="menutext"><p>Haseł</p></a></li>
+                <li><a href="genColor.html" class="menutext"><p>Kolorów</p></a></li>
+                <li><a href="quote.html" class="menutext"><p>Cytatów</p></a></li>
+                <li><a href="curiosity.html" class="menutext"><p>Ciekawostek</p></a></li><hr class="hrDarkMode">
+                <li><a class="menutext1"><p>Kalkulator</p></a></li><br>
+                <li><a href="Calculator.html" class="menutext"><p>Standardowy</p></a></li>
+                <li><a href="bmi.html" class="menutext"><p>BMI</p></a></li>
+                <li><a href="kcal.html" class="menutext"><p>Zapotrzebowania kcal</p></a></li>
+                <li><a href="temp.html" class="menutext"><p>Stopni</p></a></li>
+                <li><a href="sizes.html" class="menutext"><p>Miary</p></a></li><hr class="hrDarkMode">
+                <li><a class="menutext1"><p>Finanse</p></a></li><br>
+                <li><a href="currency.html" class="menutext"><p>Waluty</p></a></li>
+                <li><a href="KryptoCurrency.html" class="menutext"><p>Kryptowaluty</p></a></li><hr class="hrDarkMode">
+                <li><a class="menutext1"><p>Różne</p></a></li><br>
+                <li><a href="weather.html" class="menutext"><p>Pogoda</p></a></li>
+                <li><a href="map.html" class="menutext"><p>Mapa</p></a></li><br>
+            </ul>
+        </nav>
+        <div>
+            <a href="mainPage.html" class="housebtn"><i class="fa-solid fa-house"></i></a>
+
+        </div>
+        <div>
+            <button class="darkMode">
+                <i class="fas fa-circle-half-stroke"></i>
+            </button>
+        </div>
+        <div>
+
+        </div>
+        <div>
+            <button id="translateButton"><img class="flag" src="./images/usa.png"></button>
+        </div>
+        <div class="hello">
+            <p>Kacper Werakso</p>
+        </div>
+    </div><br><br><br><br>
+    <div class="currencyAll">
+        <p class="currencyTitle">Średnia cena walut na dziś:</p>
+        <p class="currentDate"></p><br><br>
+        <input type="text" class="searchInputCurrency" id="searchInput" placeholder="..." oninput="searchCurrencies()"><br><br><br>
+        <div class='currencies'></div>
+    </div><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="footer">
+        <p class="footerText">© 2023 Kacper Werakso</p>
+    </div>
+    
+  
+    <script>
+        async function fetchCurrencies() {
+            const url = `https://api.nbp.pl/api/exchangerates/tables/a/today`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                const currencies = data[0].rates;
+
+                const sortedCurrencies = currencies.sort((a, b) => b.popularity - a.popularity);
+
+                const topCurrencies = sortedCurrencies.slice(0, 30);
+                const currenciesContainer = document.querySelector('.currencies');
+
+                currenciesContainer.innerHTML = '';
+
+                topCurrencies.forEach(currency => {
+                const currencyRow = document.createElement('div');
+                currencyRow.innerHTML = `<br><br>${currency.code} <br>1.0 ${currency.currency} = ${currency.mid} zł` + '<br><br>';
+                currenciesContainer.appendChild(currencyRow);
+                });
+            } catch (error) {
+                console.log('Przekroczono limit pobierania danych:', error);
+            }
+            }
+
+            window.addEventListener('load', fetchCurrencies);
+
+    </script>
+
+
+    <script src="script.js"></script>     
+    <script src="https://kit.fontawesome.com/34c494935b.js" crossorigin="anonymous"></script>
+</body>
+</html>

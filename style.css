@@ -1,0 +1,2016 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.menu {
+    grid-template-columns: 140px 30px 70px 1fr 45px 230px;
+    height: 60px;
+    text-align: center;
+    display: grid;
+    position: fixed;
+    width: 100%;
+    color:#1e1d23;
+    background-color: white;
+    z-index: 99;
+}
+
+
+.body {
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	background-color: white;
+    font-size: 24px;
+	
+}
+
+.shadow {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+.navul {
+	padding-top: 50px;
+	position: absolute;
+	height: 100vh;
+	width: 350px;
+	left: -350px;
+    list-style: none;    
+	background-color: white;
+	transition: transform .3s;
+    font-size: 14px;
+    font-weight: 100;
+    overflow-y: auto;
+}
+
+.hello {
+    font-weight: 100;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 14px;
+    font-size: 22px;
+    color: black;
+}
+
+.navul:active,
+.navul:focus {
+    text-decoration: none
+}
+
+.menutext {
+    display: block;
+    padding: 10px 30px;
+    color: #333;
+    text-decoration: none;
+    text-align: start;
+}
+
+.menutext p {
+    margin: 0;
+}
+
+.menutext1 {
+    display: block;
+    padding: 10px 30px;
+    color: #333;
+    text-decoration: none;
+    text-align: start;
+    font-weight: 600;
+}
+
+.menutext1 p {
+    margin:0;
+}
+
+.menutext:hover {
+    outline: none;
+    text-decoration: none;
+    background-color: whitesmoke;
+    color: black;
+}
+
+.btnmenu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px 20px;
+    font-size: 36px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color:#1e1d23;
+	transition: transform .3s;
+    margin-left: 20px;
+    outline: 0;
+
+}
+
+.btnmenu:focus {
+    outline: none;
+}
+
+.active {
+    transform: translateX(350px);
+    
+}
+
+
+
+.active1 {
+    color: #1e1d23;
+    z-index: 1;
+    background-color: white;
+    padding-right:22.2%;
+    transition: .3s ease;
+    max-height: 60px;
+
+    
+}
+
+.hide {
+    display: none!important;
+}
+
+.loginbtn {
+    color:#1e1d23;
+    border:solid 1px #1e1d23;
+    border-radius: 20px;
+    padding: 5px 40px;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 100;
+    margin-top: 9px;
+    transition: 0.25s ease-in;
+    text-decoration: none;
+}
+
+.loginbtn p {
+    margin: 0;
+}
+
+.loginbtn:hover {
+    background-color: #1e1d23;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.title {
+    font-weight: 100;
+}
+
+.fa-house {
+    text-align: start;
+    size: 20px;
+    margin-top: 20px;
+    color: #1e1d23;;
+    
+}
+
+.fa-house:hover {
+    cursor: pointer;
+}
+
+.fa-arrow-left {
+    font-size: 40px;
+    margin-top: 10px;
+    color: #1e1d23;
+    margin-left: 38px;
+}
+
+.fa-circle-half-stroke {
+    margin-top: 20px;
+}
+
+.flag {
+    max-width: 25px;
+    margin-top: 23px;
+    cursor: pointer;
+}
+
+
+
+.divtest {
+    color: #1e1d23;
+}
+
+.aboutMeBtns {
+    text-align: center;
+}
+
+.aboutMeBtn {
+    text-align: center;
+    font-weight: 100;
+    border: solid 1px;
+    border-radius: 20px;
+    background: none;
+    padding: 5px 20px;
+    font-size: large;
+    margin: 10px;
+    transition: .1s ease-in;
+}
+.aboutMeBtn p {
+    margin: 0;
+}
+
+.aboutMeBtn:hover {
+    background-color: rgb(243, 241, 241);
+    color: #1e1d23;
+    cursor: pointer;
+}
+
+.aboutMeBtn:focus {
+    outline: none;
+}
+
+.divMainTitle {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.mainTitle {
+    color: #1e1d23;
+    font-size: 50px;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.mainTitleText {
+    color: #1e1d23;
+    font-weight: 100;
+    line-height: 45px;
+    text-align: start;
+    word-break:keep-all;
+    font-size: 20px;
+    color: #1e1d23;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.slidein {
+    opacity: 1;
+}
+
+
+
+.mainTitleText1 {
+    color: #1e1d23;
+    font-weight: 100;
+    line-height: 45px;
+    font-size: 15px;
+    color: #1e1d23;
+    text-align: end;
+}
+.mainTitleText2 {
+    color: #1e1d23;
+    font-weight: 100;
+    line-height: 45px;
+    font-size: 18px;
+    color: #1e1d23;
+    text-align: end;
+    margin-top: -30px;
+}
+
+
+
+
+
+.divMainAboutMe {
+    display: grid;
+    color: #1e1d23;
+    grid-template-columns: 1fr 10% 1fr;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.aboutMeTitle {
+    color: #1e1d23;
+    font-weight: 500;
+    font-size: 50px;
+}
+
+.aboutMeText {
+    color: #1e1d23;
+    font-weight: 100;
+    font-size: 20px;
+    width: 100%;
+
+}
+
+.imgMe {
+    max-width: 400px;
+}
+
+.aboutMeProgramming {
+    width: 80%;
+    display: grid;
+    color: #1e1d23;
+    grid-template-columns: 1fr 60px 2fr;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+    margin-bottom: 10%;
+}
+
+.aboutMeProgrammingText {
+    color: #1e1d23;
+    font-weight: 100;
+    font-size: 20px;
+    background-size:cover;
+    margin: 0 auto;
+    text-align: start;
+    margin-top: -60px;
+    
+}
+
+.link {
+    color: #1e1d23;
+    font-size: 80px;
+    transition: .2s ease-in;
+}
+
+.link:hover {
+    color: royalblue;
+}
+
+.skillsList {
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+    padding: 8%;
+    background-color: #1e1d23;
+}
+
+.skillsTitle {
+    font-weight: 540;
+    margin-bottom: 40px;
+    font-size: 25px;
+}
+
+.skillsText {
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.contact {
+    color: #1e1d23;
+    text-align: start;
+    margin-left: 20%;  
+}
+
+.contactTitle {
+    color: #1e1d23;
+    font-size: 50px;
+}
+
+.contactText,
+.fa-phone,
+.fa-envelope {
+    color: #1e1d23;
+    display: inline;
+    font-size: 22px;
+    margin-right: 10px;
+    font-weight: 100;
+}
+
+.footer {
+    background-color: #1e1d23;
+    padding: 10px;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.footerText {
+    color: white;
+    text-align: center;
+    font-weight: 100;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.fa-download {
+    color: #1e1d23;
+    text-align: start;
+    font-size: 20px;
+    margin-left: 5px;
+    font-size: 30px;
+
+}
+
+.downloadCV {
+    text-align: center;
+    margin-bottom: 100px;
+    color: #1e1d23;
+    
+}
+
+.downloadBtn {
+    text-align: center;
+    border: solid 1px #1e1d23;
+    border-radius: 50px;
+    display: inline-flex;
+    background-color: #1e1d23;
+    color: white;
+    font-weight: 100;
+    padding: 2px 20px;
+    transition: .3s ease-in;
+    margin-bottom: 10px;
+    font-size: 15px;
+
+}
+
+.downloadBtn p {
+    margin: 0;
+}
+
+.downloadBtn1 {
+    text-align: center;
+    border: solid 1px #1e1d23;
+    border-radius: 50px;
+    display: inline-flex;
+    background-color: #1e1d23;
+    color: white;
+    font-weight: 100;
+    padding: 10px 30px;
+    transition: .3s ease-in;
+}
+
+.downloadBtn1 p {
+    margin: 0;
+}
+
+.downloadBtn:hover {
+    background-color: white;
+    color: #1e1d23;
+}
+
+.downloadBtn1:hover {
+    background-color: white;
+    color: #1e1d23;
+}
+
+.downloadBtn1:focus {
+    outline: none;
+}
+
+.mycv {
+    font-size: 50px;
+    color: #1e1d23;
+}
+
+.downloadBtn:focus {
+    outline: none;
+}
+
+.projects {
+    color: #1e1d23;
+    width: 100%;
+    font-size: 50px;
+    text-align: center;
+    display: block;
+    box-sizing: border-box;
+
+    
+}
+
+.greyBackground {
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+.project1 {
+    width: 400px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 0px solid black;
+    display: inline-block;
+    overflow: auto;
+    background-color: white;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5);
+    max-height: 500px;
+    min-height: 500px;
+    gap: 20%;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 10%;
+}
+
+.sdctitle {
+    color: #1e1d23;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.sdctext {
+    color: #1e1d23;
+    font-weight: 100;
+    text-align: start;
+    font-size: large;
+    padding: 20px;
+    margin-top: -20px;
+
+}
+
+.project2 {
+    width: 50%;
+    text-align: center;
+    box-sizing: border-box;
+    border: 0px solid black;
+    display: inline-block;
+    overflow: auto;
+    background-color: white;
+    margin-left: 10%;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5);
+}
+
+
+.sdctitle {
+    color: #1e1d23;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.sdctext {
+    color: #1e1d23;
+    font-weight: 100;
+    text-align: start;
+    font-size: large;
+    padding: 20px;
+    margin-top: -20px;
+}
+
+.project3 {
+    width: 35%;
+    text-align: center;
+    box-sizing: border-box;
+    border: 0px solid black;
+    display: inline-block;
+    overflow: auto;
+    background-color: white;
+    margin-left: 10%;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5);
+    
+}
+
+.project4 {
+    width: 35%;
+    text-align: center;
+    box-sizing: border-box;
+    border: 0px solid black;
+    display: inline-block;
+    overflow: auto;
+    background-color: white;
+    margin-left: 10%;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5);
+}
+
+
+.MyAppPyImg,
+.djangoImg,
+.htmlImg,
+.sdcimg {
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-height: 280px;
+    height: 280px;
+    display: block;
+
+}
+
+.MyAppPytitle {
+    color: #1e1d23;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 10px;
+
+
+}
+
+.MyAppPytext {
+    color: #1e1d23;
+    font-weight: 100;
+    text-align: start;
+    font-size: large;
+    padding: 20px;
+    margin-top: -20px;
+
+}
+
+
+
+.full {
+    color:rgb(87, 86, 86);
+    opacity: 50%;
+    padding: 100px;
+    margin-left: 5%;
+    font-style: italic;
+    text-align: start;
+}
+
+.frontLink {
+    text-align: center;
+    width: 100%;
+
+
+}
+
+
+.frontEth {
+    width: 37%;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5);
+    margin-right: 30px;
+    margin-left: 30px;
+    transition: 0.2s ease-in;
+}
+
+.frontEth:hover {
+    transform: scale(1.04);
+    cursor: pointer;
+}
+
+.frontImgs {
+    text-align: center;
+    width: 100%;
+    
+}
+
+.qrall {
+    padding: 100px;
+    text-align: center;
+    font-weight: 100;
+}
+
+.qrcodemessage {
+    color: #1e1d23;
+}
+
+.content {
+    font-weight: 100;
+    font-size: large;
+    padding: 8px 20px;
+    border-radius: 30px;
+    border: #1e1d23 solid 1px;
+    background-color: white;
+}
+
+.content:focus {
+    outline: none;
+}
+
+
+.generateQRCode {
+    text-align: center;
+    border: solid 1px #1e1d23;
+    border-radius: 50px;
+    display: inline-flex;
+    background-color: #1e1d23;
+    color: white;
+    font-weight: 100;
+    padding: 10px 15px;
+    transition: .3s ease-in;
+    font-size: 20px;
+}
+
+.generateQRCode p {
+    margin: 0;
+}
+
+.generateQRCode:hover {
+    background-color: white;
+    color: #1e1d23;
+}
+
+.generateQRCode:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+.textup {
+    text-align: center;
+    margin-top: 150px;
+    font-weight: 600;
+    color: #1e1d23;
+    
+}
+
+.input {
+    text-align: center;
+    padding: 10px;
+    width: 220px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    border: solid 2px;
+    border-radius: 10px;
+    color: #1e1d23;
+}
+
+.odp {
+    padding: 5px;
+    margin-top: -30px;
+    font-size: 13px;
+    color: #1e1d23;
+}
+
+.odp:hover {
+    animation: none;
+    color: #1e1d23;
+}
+
+.textul {
+    margin-left: -40px;
+    font-size: 30px;
+    color: #1e1d23;
+
+
+}
+
+.li {
+
+    text-align: left;
+    justify-content:center;
+    margin-left: 170px;
+    color: #1e1d23;
+
+
+}
+
+.textdown {
+    font-size: 20px;
+    margin-top: 50px;
+    color: #1e1d23;
+}
+
+.strong {
+    color: gold;
+}
+
+
+.allCalc {
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    display: block;
+    padding: 2%;
+    border-radius: 20px;
+    background-color: rgba(0,0,0,0.1);
+    width: 100%; 
+    max-width: 500px;
+}
+
+.containerCalc {
+    text-align: center;
+    width: 100%;
+    vertical-align: auto;
+}
+
+.windowCalc {
+    border: solid 1px black;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: white;
+    font-weight: 100;
+    color: #1e1d23;
+    width: 430px;
+    max-height: 60px;
+    overflow: hidden;
+    line-height: 1.6;
+    white-space: normal;
+    align-items: center;
+    display:flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.buttonCalc {
+    flex-direction: column;
+    padding: 15px 50px;
+    width: 10%;
+    text-align: center;
+    align-items: center;
+    line-height: 30px;
+    margin-top: 4px;
+    border-radius: 20px;
+    border-width: 20px;
+    border: solid 1px #1e1d23;
+    background-color:white;
+    font-size: 20px;
+    font-weight: 100;
+    transition: .1s ease-in;
+}
+
+.buttonCalc:hover {
+    background-color: #1e1d23;
+    cursor: pointer;
+    color: white;
+}
+
+.buttonCalc:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+.buttonCalc1 {
+    flex-direction: column;
+    padding: 15px 50px;
+    width: 10%;
+    text-align: center;
+    align-items: center;
+    line-height: 30px;
+    margin-top: 4px;
+    border-radius: 20px;
+    border-width: 20px;
+    border: solid 1px #1e1d23;
+    background-color:white;
+    font-size: 20px;
+    font-weight: 100;
+    transition: .1s ease-in;
+}
+
+.buttonCalc1:hover {
+    background-color: #1e1d23;
+    cursor: pointer;
+    color: white;
+}
+
+.buttonCalc1:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+.divTemp {
+    text-align: center;
+    border: solid 1px;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    display:block;
+    width: 400px;
+}
+
+.divSize {
+    text-align: center;
+    border: solid 1px;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    display:block;
+    width: 400px;
+}
+
+
+.winTemp {
+    border: solid 1px;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    background-color:white;
+}
+
+.winTemp:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+.winSize {
+    border: solid 1px;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    background-color:white;
+}
+
+.winSize:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+.win1 {
+    border: solid 1px;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    background-color:white;
+}
+
+
+.btn1Temp,
+.btn2Temp,
+.btn3Temp,
+.btn1Size,
+.btn2Size,
+.btn3Size {
+    padding: 10px;
+    margin-top: 10px;
+    width: 60px;
+    border: solid 1px;
+    border-radius: 20px;
+    margin-left: -20px;
+    background-color:white;
+    transition: 0.4s;
+    font-weight: 100;
+    font-size: 18px;
+
+}
+
+.btn4Temp,
+.btn4Size {
+    padding: 10px;
+    margin-top: 10px;
+    width: 80px;
+    border: solid 1px;
+    border-radius: 20px;
+    background-color:white;
+    transition: 0.4s;
+    margin-left: 10px;
+    font-weight: 100;
+    font-size: 18px;
+}
+
+.btn4Size p {
+    margin: 0;
+}
+
+.btn4Temp p {
+    margin: 0;
+}
+
+.btn1Temp:hover,
+.btn2Temp:hover,
+.btn3Temp:hover,
+.btn4Temp:hover,
+.btn1Size:hover,
+.btn2Size:hover,
+.btn3Size:hover,
+.btn4Size:hover {
+    background-color: #1e1d23;
+    cursor: pointer;
+    color: white;
+    border: #1e1d23;
+
+}
+
+.btn1Temp:focus,
+.btn2Temp:focus,
+.btn3Temp:focus,
+.btn4Temp:focus,
+.btn1Size:focus,
+.btn2Size:focus,
+.btn3Size:focus,
+.btn4Size:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+
+.fa-arrows-rotate {
+    transition: 1s;
+    font-size: 20px;
+    color: #1e1d23;
+    font-size: large;
+    font-weight: 100;
+
+}
+
+
+.fa-arrows-rotate:hover {
+    cursor: pointer;
+    transform: rotate(180deg);
+}
+
+.hide {
+    display: none;
+}
+
+.divBMI {
+    text-align: center;
+    border: solid 1px;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    display:block;
+    width: 500px;
+}
+
+.labelBMI {
+    color: #1e1d23;
+    text-align: start;
+    font-weight: 100;
+    font-size: large; 
+}
+
+.textBMI {
+    color: #1e1d23;
+    font-weight: 100;
+    font-size: large;
+}
+
+.kBMI {
+    color: #1e1d23;
+}
+
+.mBMI {
+    color: #1e1d23
+}
+
+
+.btnBMI {
+    text-align: center;
+    border: solid 1px #1e1d23;
+    border-radius: 50px;
+    display: inline-flex;
+    background-color: #1e1d23;
+    color: white;
+    font-weight: 100;
+    padding: 10px 15px;
+    transition: .3s ease-in;
+    font-size: 20px;
+}
+
+.btnBMI p {
+    margin: 0;
+}
+
+.btnBMI:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+.btnBMI:hover {
+    background-color: white;
+    color: #1e1d23;
+}
+
+.weighBMI {
+    font-weight: 100;
+    font-size: large;
+    padding: 8px 20px;
+    border-radius: 30px;
+    border: #1e1d23 solid 1px;
+}
+
+.weighBMI:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+.heightBMI {
+    font-weight: 100;
+    font-size: large;
+    padding: 8px 20px;
+    border-radius: 30px;
+    border: #1e1d23 solid 1px;
+}
+
+.ageBMI {
+    font-weight: 100;
+    font-size: large;
+    padding: 8px 20px;
+    border-radius: 30px;
+    border: #1e1d23 solid 1px;
+}
+
+.heightBMI:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+.answerBMI {
+    color: #1e1d23;
+    font-weight: 100;
+    
+}
+
+.passGENall {
+    padding: 100px;
+    color: #1e1d23;
+    text-align: center;
+
+}
+
+.passTitle {
+    font-weight: 100;
+}
+
+.btnGenerate {
+    text-align: center;
+    border: solid 1px #1e1d23;
+    border-radius: 50px;
+    display: inline-flex;
+    background-color: #1e1d23;
+    color: white;
+    font-weight: 100;
+    padding: 10px 15px;
+    transition: .3s ease-in;
+    font-size: 20px;
+}
+
+.btnGenerate p {
+    margin: 0;
+}
+
+.btnGenerate:hover {
+    background-color: white;
+    color: #1e1d23;
+}
+
+.btnGenerate:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+
+.passwordGEN {
+    color: #1e1d23;
+    font-size: 50px;
+    font-weight: 100;
+}
+
+
+.colorGenAll {
+    padding: 100px;
+    text-align: center;
+}
+
+.colorTitle {
+    color: #1e1d23;
+    font-weight: 100;
+}
+
+.color-box {
+    width: 230px;
+    height: 230px;
+    margin: 0 auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.color-box:hover {
+    cursor: pointer;
+}
+
+.copied-msg {
+    color: #1e1d23;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+.currencyAll {
+    text-align: center;
+    font-weight: 100;
+    
+}
+
+.currencies {
+    color: #1e1d23;
+    font-size: 25px;
+    background-color: whitesmoke;
+}
+
+.currencyTitle {
+    color: #1e1d23;
+}
+
+.currentDate {
+    color: #1e1d23;
+    font-weight: 500;
+    margin-top: 30px;
+}
+
+.cryptoUl {
+    color: #1e1d23;
+    font-size: 25px;
+    background-color: whitesmoke;
+
+}
+
+.searchInputCurrency {
+    text-align: center;
+    font-weight: 100;
+    font-size: large;
+    padding: 8px 20px;
+    border-radius: 30px;
+    border: #1e1d23 solid 1px;
+    
+}
+
+.searchInputCurrency input[type="text"] {
+    text-align: center;
+    font-size: large;
+}
+
+.searchInputCurrency:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+.mapAll {
+    position: relative;
+    z-index: 0;
+}
+
+
+#map { 
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
+    width: 90%;
+    z-index: 0;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5);
+    border: solid 1px black;
+
+}
+
+.WeatherAll {
+    text-align: center;
+}
+
+.WeatherTitle {
+    color:#1e1d23;
+    font-weight: 100;
+    margin-left: 20%;
+    margin-right: 20%;
+
+}
+
+.city-name {
+    color: #1e1d23;
+    font-weight: 100;
+}
+
+.inputWeather {
+    font-weight: 100;
+    font-size: large;
+    padding: 8px 20px;
+    border-radius: 30px;
+    border: #1e1d23 solid 1px;
+    text-align: center;
+}
+
+.inputWeather:focus {
+    outline: none;
+}
+
+
+
+.buttonWeather {
+    text-align: center;
+    border: solid 1px #1e1d23;
+    border-radius: 50px;
+    display: inline-flex;
+    background-color: #1e1d23;
+    color: white;
+    font-weight: 100;
+    padding: 10px 15px;
+    transition: .3s ease-in;
+    font-size: 20px;
+}
+
+.buttonWeather p {
+    margin: 0;
+}
+
+.buttonWeather:hover {
+    background-color: white;
+    color: #1e1d23;
+}
+
+.buttonWeather:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+.WeatherDisplay {
+    border: 0px;
+    background-color: whitesmoke;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+}
+
+.weather,
+.temperature,
+.humidity {
+    color: #1e1d23;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+.authorWeather {
+    color: #1e1d23;
+    font-weight: 100;
+    font-size: 10px;
+    text-align: end;
+    margin-right: 1%;
+    
+}
+
+.warning {
+    font-weight: 100;
+    color:tomato;
+}
+
+.randomQuote,
+.randomCuriosity {
+    color: #1e1d23;
+    font-weight: 100;
+    margin-left: 10%;
+    margin-right: 10%;
+
+
+}
+
+.pricesAll {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 3%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pricesPerson {
+    border: solid 1px #1e1d23;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+
+.loginAll {
+    text-align: center;
+    border: none;
+    padding: 40px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.loginInput,
+.passwordInput {
+    margin-bottom: 15px;
+    font-weight: 100;
+    font-size: 17px;
+    padding: 7px 30px;
+    border-radius: 20px;
+    border: #1e1d23 solid 1px;
+    background-color: white;
+}
+
+.loginInput,
+.passwordInput:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+.loginFromLogin {
+    text-align: center;
+    border: solid 1px #1e1d23;
+    border-radius: 20px;
+    display: inline-flex;
+    background-color: white;
+    color: #1e1d23;
+    font-weight: 100;
+    padding: 5px 35px;
+    transition: .2s ease-in;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.loginFromLogin p {
+    margin: 0;
+}
+
+.loginFromLogin:hover {
+    background-color: #1e1d23;
+    color: white;
+}
+
+.loginFromLogin:focus {
+    text-decoration: none;
+    outline: none;
+    background-color: white;
+}
+
+.loginFromLogin:active {
+    display: none;
+}
+
+
+
+.registrationFromLogin {
+    font-weight: 100;
+    font-size: 16px;
+    color: white;
+    transition: .2s ease-in;
+
+}
+
+
+
+.registrationFromLogin:hover {
+    text-decoration: none;
+    outline: none;
+    color: black;
+}
+
+.rememberPassword {
+    font-weight: 100;
+    font-size: 15px;
+    color: white;
+    transition: .2s ease-in;
+
+}
+
+.rememberPassword:hover {
+    text-decoration: none;
+    outline: none;
+    color: black;
+}
+
+.loginPasswordNoPlaceholder {
+    font-weight: 100;
+    margin-bottom: -1px;
+    font-size: 15px;
+}
+
+.checkboxAllLogin {
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+.loginCheckbox {
+    font-weight: 100;
+    font-size: 16px;
+}
+
+.copied-msg1 {
+    display: none;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+.passwordGEN.copyable {
+    cursor: pointer;
+}
+
+.titleLoginAlert {
+    color: #1e1d23;
+    font-weight: 100;
+    font-size: 10px;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.fa-circle-half-stroke {
+    color: #1e1d23;
+}
+
+#translateButton {
+    border: none;
+    background-color: white;
+}
+
+#translateButton:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+.gitClone {
+    color: black;
+    font-weight: 100;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.copiedNote {
+    font-size: 15px;
+}
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .divMainAboutMe {
+        display: block;
+        text-align: center;
+    }
+    .aboutMeTitle {
+        text-align: start;
+    }
+    .aboutMeText {
+        text-align: start;
+    }
+    .imgMe {
+        text-align: center;
+        justify-content: center;
+    }
+    .aboutMeProgramming {
+        display: block;
+    }
+    .aboutMeProgrammingText {
+        margin-top: 10%;
+    }
+    .skillsList {
+        display: block; 
+    }
+    .skillsTitle {
+        font-size: 40px;    
+    }
+    .skillsText {
+        font-size: 20px;
+    }
+    .passwordGEN {
+        font-size: 160%;
+    }
+
+
+
+
+}
+
+@media (max-width: 600px) {
+    .divMainAboutMe {
+        display: block;
+        text-align: center;
+    }
+    .aboutMeTitle {
+        text-align: start;
+    }
+    .aboutMeText {
+        text-align: start;
+    }
+    .imgMe {
+        text-align: center;
+        justify-content: center;
+        max-width: 70%;
+    }
+    .divMainAboutMe {
+        display: block;
+    }
+    .aboutMeProgramming {
+        display: block;
+    }
+    .aboutMeProgrammingText {
+        margin-top: 10%;
+    }
+    .skillsList {
+        display: block;
+    }
+    .skillsTitle {
+        font-size: 33px;    
+    }
+    .skillsText {
+        font-size: 20px;
+    }
+    .frontLink {
+        display: block;
+        margin-top: 90px;
+        min-width: 300px
+    }
+    .frontEth {
+        width: 80%;
+    }
+    .full {
+        margin-left: -30px;
+    }
+    .greyBackground {
+        display: block;
+    }
+    .project1 {
+        width: 70%;
+    }
+    .passwordGEN {
+        font-size: 110%;
+    }
+    .currencies {
+        font-size: 80%;
+    }
+    .cryptoUl {
+        font-size: 80%;
+    }
+    .loginAll {
+        width: 100%;
+        border-radius: 0px;
+    }
+    .divBMI {
+        width: 350px;
+    }
+    .allCalc {
+        border-radius: 0px;
+    }
+    .windowCalc {
+        width: 375px;
+    }
+    .buttonCalc {
+        padding: 40px 44px;
+        margin: -2px;
+        margin-top: 5px;
+    }
+    .loginbtn {
+        margin-right: 50%;
+        padding: 3px 15px;
+        margin-top: 13px;
+    }
+    .contact {
+        margin-right: 40px;
+    }
+    .divTemp {
+        padding: 100px 10px;
+        margin-top: 80px;
+    }
+    .divSize {
+        padding: 100px 10px;
+        margin-top: 80px;
+    }
+    .hello {
+        font-size: 18px;
+        margin-right: 100px;
+        line-height: 1;
+        font-weight: 100;
+    }
+    .gitClone {
+        font-size: 8px;
+    }
+
+    
+}
+
+.darkMode {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.darkMode:active {
+    transition: transform 0.01s ease;
+    transform: rotateY(180deg);
+    direction: none;
+
+}
+.darkMode:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+.dark-mode {
+    background-color:#1e1d23;
+    color: white;
+}
+
+.dark-mode .menu {
+    background-color:#1e1d23;
+}
+.dark-mode .aboutMeTitle  {
+    color: white;
+}
+.dark-mode .aboutMeText {
+    color: white;
+}
+.dark-mode .fa-house {
+    color: white;
+}
+.dark-mode .fa-circle-half-stroke {
+    color: white;
+}
+.dark-mode .loginbtn {
+    color: white;
+    border: white 1px solid 
+}
+.dark-mode .loginbtn:hover {
+    color:#1e1d23;
+    background-color: white;
+}
+.dark-mode .aboutMeBtn {
+    color: white;
+}
+.dark-mode .aboutMeBtn:hover {
+    color:#1e1d23;
+    background-color: white;
+}
+.dark-mode .mainTitle {
+    color: white;
+}
+.dark-mode .mainTitleText {
+    color: white;
+}
+.dark-mode .mainTitleText1 {
+    color: white;
+}
+.dark-mode .mainTitleText2 {
+    color: white;
+}
+.dark-mode .link {
+    color: white;
+}
+.dark-mode .link:hover {
+    color: rgb(145, 72, 92);
+}
+.dark-mode .aboutMeProgrammingText {
+    color: white;
+}
+.dark-mode .btnmenu {
+    color: white;
+}
+.dark-mode .skillsList {
+    background-color:#111113;
+}
+.dark-mode .greyBackground {
+    background-color:#1e1d23;
+}
+.dark-mode .projects {
+    color: white;
+}
+.dark-mode .full {
+    color: whitesmoke;
+}
+.dark-mode .MyAppPytitle {
+    color: white;
+}
+.dark-mode .MyAppPytext {
+    color: white;
+}
+.dark-mode .downloadBtn {
+    color: white;
+    border: 1px solid white
+}
+.dark-mode .downloadBtn:hover {
+    color:#1e1d23;
+    background-color: white;
+}
+.dark-mode .project1 {
+    background-color:#18181b;
+}
+.dark-mode .contactTitle {
+    color: white;
+}
+.dark-mode .fa-phone {
+    color: white;
+}
+.dark-mode .fa-envelope {
+    color: white;
+}
+.dark-mode .contactText {
+    color: white;
+}
+.dark-mode .mycv {
+    color: white;
+}
+.dark-mode .mycv:hover {
+    color: white;
+}
+.dark-mode .downloadBtn1 {
+    color: white;
+    border: 1px white solid
+}
+.dark-mode .downloadBtn1:hover {
+    color:#1e1d23;
+}
+.dark-mode .footer {
+    background-color: #171719;
+}
+.dark-mode .navul {
+    background-color: #1e1d23;
+}
+.dark-mode .fa-times {
+    background-color: #1e1d23;
+}
+.dark-mode .active1 {
+    background-color: #1e1d23;
+}
+.dark-mode .menutext1 {
+    color: white;
+}
+.dark-mode .menutext1:hover {
+    color: white;
+}
+.dark-mode .menutext {
+    color: white;
+}
+.dark-mode .menutext:hover {
+    background-color: whitesmoke;
+    color: #1e1d23;
+}
+.dark-mode .hrDarkMode {
+    border-color: whitesmoke;
+}
+.dark-mode .qrcodemessage {
+    color: white;
+}
+.dark-mode .content {
+    color: white;
+    border: 1px white solid;
+    background-color: white;
+}
+.dark-mode .generateQRCode {
+    border: white 1px solid;
+}
+.dark-mode .passTitle {
+    color: white;
+}
+.dark-mode .btnGenerate {
+    color: white;
+    border: white 1px solid;
+}
+.dark-mode .btnGenerate:hover {
+    color:#1e1d23;
+}
+.dark-mode .passwordGEN {
+    color: white;
+}
+.dark-mode .copied-msg1 {
+    color: white;
+}
+.dark-mode .colorTitle {
+    color: white;
+}
+.dark-mode .copied-msg {
+    color: white;
+}
+.dark-mode .WeatherTitle {
+    color: white;
+}
+.dark-mode .buttonWeather {
+    border: white 1px solid
+}
+.dark-mode .warning {
+    color: white;
+}
+.dark-mode .randomQuote {
+    color: white;
+}
+.dark-mode .randomCuriosity {
+    color: white;
+}
+.dark-mode .allCalc {
+    background-color:  #111113;
+}
+.dark-mode .buttonCalc {
+    background-color: white;
+}
+.dark-mode .buttonCalc:hover {
+    background-color: rgb(145, 72, 92);
+    color: black;
+}
+.dark-mode .labelBMI {
+    color: white;
+}
+.dark-mode .textBMI {
+    color: white;
+}
+.dark-mode .btnBMI {
+    color: white;
+    background-color:#19191d;
+    border: 1px white solid;
+}
+.dark-mode .btnBMI:hover {
+    color:#1e1d23;
+    background-color:white;
+}
+.dark-mode .answerBMI {
+    color: white;
+}
+.dark-mode .divBMI {
+    border: none;
+    background-color: #19191d;
+}
+.dark-mode .divTemp {
+    border: none;
+    background-color: #19191d;
+}
+.dark-mode .btn1Temp:hover {
+    background-color: rgb(145, 72, 92);
+    color: black;
+}
+.dark-mode .btn2Temp:hover {
+    background-color: rgb(145, 72, 92);
+    color: black;
+}
+.dark-mode .btn3Temp:hover {
+    background-color: rgb(145, 72, 92);
+    color: black;
+}
+.dark-mode .btn4Temp:hover {
+    background-color: rgb(145, 72, 92);
+    color: black;
+}
+.dark-mode .fa-arrows-rotate {
+    color: white;
+}
+.dark-mode .btn1Size:hover {
+    background-color: rgb(145, 72, 92);
+    color: black;
+}
+.dark-mode .btn2Size:hover {
+    background-color: rgb(145, 72, 92);
+    color: black;
+}
+.dark-mode .btn3Size:hover {
+    background-color: rgb(145, 72, 92);
+    color: black;
+}
+.dark-mode .btn4Size:hover {
+    background-color: rgb(145, 72, 92);
+    color: black;
+}
+.dark-mode .currencyTitle {
+    color: white;
+}
+.dark-mode .searchInputCurrency {
+    color: black
+}
+.dark-mode .cryptoUl {
+    color: white;
+    background-color:#18181b;
+}
+.dark-mode .currencyAll {
+    background-color: #1e1d23;
+}
+.dark-mode .currentDate {
+    color: white;
+}
+.dark-mode .currencies {
+    color: white;
+    background-color:#18181b;
+}
+.dark-mode .WeatherDisplay {
+    color: white;
+    background-color: #18181b;
+}
+.dark-mode .city-name {
+    color: white;
+}
+.dark-mode .weather {
+    color: white;
+}
+.dark-mode .temperature {
+    color: white;
+}
+.dark-mode .humidity {
+    color: white;
+}
+
+.dark-mode .warning {
+    color: tomato;
+}
+.dark-mode .content {
+    color: black;
+}
+.dark-mode .titleLoginAlert {
+    color: white;
+
+}
+.dark-mode .loginAll {
+    background-color: #111113;
+}
+.dark-mode #translateButton {
+    background-color: #1e1d23;
+}
+.dark-mode .loginFromLogin {
+    color: white;
+    background-color: #111113;
+    border: 1px white solid;
+}
+.dark-mode .loginFromLogin:hover {
+    color:#111113;
+    background-color: white;
+}
+.dark-mode .registrationFromLogin {
+    color: white;
+}
+.dark-mode .registrationFromLogin:hover {
+    color: rgb(145, 72, 92);
+}
+.dark-mode .rememberPassword:hover {
+    color: rgb(145, 72, 92);
+}
+.dark-mode .hello {
+    color: ghostwhite;
+}
+
+.dark-mode .gitClone {
+    color: white;
+}
+
+

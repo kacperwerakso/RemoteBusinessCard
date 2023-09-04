@@ -200,16 +200,21 @@
 .aboutMeBtn {
     text-align: center;
     font-weight: 100;
-    border: solid 1px;
+    border: solid 1px black;
     border-radius: 20px;
     background: none;
     padding: 5px 20px;
     font-size: large;
     margin: 10px;
     transition: .1s ease-in;
+    color: black;
 }
 .aboutMeBtn p {
     margin: 0;
+}
+
+.aboutMeBtn p:focus {
+    outline: none;
 }
 
 .aboutMeBtn:hover {
@@ -444,6 +449,10 @@
     margin: 0;
 }
 
+.downloadBtn1 p:focus {
+    outline: none;
+}
+
 .downloadBtn:hover {
     background-color: white;
     color: #1e1d23;
@@ -613,6 +622,16 @@
     font-style: italic;
     text-align: start;
 }
+
+.full1 {
+    color:rgb(87, 86, 86);
+    opacity: 50%;
+    padding: 100px;
+    margin-left: 5%;
+    font-style: italic;
+    text-align: start;
+}
+
 
 .frontLink {
     text-align: center;
@@ -805,6 +824,7 @@
     font-size: 20px;
     font-weight: 100;
     transition: .1s ease-in;
+    color: black;
 }
 
 .buttonCalc:hover {
@@ -923,6 +943,8 @@
     transition: 0.4s;
     font-weight: 100;
     font-size: 18px;
+    color: black;
+    border-color: black;
 
 }
 
@@ -931,13 +953,14 @@
     padding: 10px;
     margin-top: 10px;
     width: 80px;
-    border: solid 1px;
+    border: solid 1px black;
     border-radius: 20px;
     background-color:white;
     transition: 0.4s;
     margin-left: 10px;
     font-weight: 100;
     font-size: 18px;
+    color: black;
 }
 
 .btn4Size p {
@@ -1594,6 +1617,9 @@
     .full {
         margin-left: -30px;
     }
+    .full1 {
+        margin-left: -30px;
+    }
     .greyBackground {
         display: block;
     }
@@ -1652,8 +1678,302 @@
     .gitClone {
         font-size: 8px;
     }
+}
 
-    
+@media (max-width: 400px) {
+    .content { 
+        margin-left: -20px;
+    }
+    .hello {
+        margin-right: 100px;
+    }
+    .windowCalc {
+        width: 300px;
+    }
+    .buttonCalc {
+        padding: 30px 35px;
+    }
+    .divTemp {
+        width: 380px;
+    }
+    .divSize {
+        width: 380px;
+    }
+    .housebtn {
+        margin-left: -30px;
+    }
+    .darkMode {
+        margin-left: -20px;
+    }
+    .contactText,
+    .fa-phone,
+    .fa-envelope {
+    color: #1e1d23;
+    display: inline;
+    font-size: 16px;
+    margin-right: 10px;
+    font-weight: 100;
+    }
+    .divMainTitle {
+        margin-top: -60px;
+    }
+    .mainTitleText {
+        line-height: 35px;
+    }
+    .full {
+        margin-bottom: -30px;
+    }
+    .passwordGEN {
+        font-size: 23px;
+        margin-left: -25px;
+    }
+
+}
+
+@media (min-width: 1550px) {
+    .divMainTitle {
+        margin-top: 250px;
+    }
+    .divMainAboutMe {
+        margin-top: 200px;
+    }
+    .imgMe {
+        min-width: 600px;
+    }
+    .aboutMeBtn {
+        padding: 8px 34px;
+        font-size: 26px;
+        border-radius: 50px;
+        margin-top: 40px;
+    }
+    .mainTitleText {
+        font-size: 25px;
+        line-height: 50px;
+    }
+    .aboutMeText {
+        font-size: 25px;
+        line-height: 45px;
+    }
+    .link {
+        font-size: 130px;
+    }
+    .aboutMeProgrammingText {
+        font-size: 25px;
+        line-height: 45px;
+        margin-top: 10px;
+    }
+    .skillsTitle {
+        font-size: 35px;
+        margin-bottom: 80px;
+    }
+    .skillsText {
+        font-size: 30px;
+    }
+    .project1 {
+        width: 35%;
+    }
+    .full1 {
+        margin-bottom: -170px;
+    }
+    .MyAppPytext {
+        text-align: center;
+    }
+    .contact {
+        margin-top: 100px;
+    }
+    .contactText,
+    .fa-phone,
+    .fa-envelope {
+    color: #1e1d23;
+    display: inline;
+    font-size: 30px;
+    margin-right: 10px;
+    font-weight: 100;
+    }
+    .downloadCV {
+        margin-top: 200px;
+        margin-bottom: 200px;
+    }
+    .qrall {
+        margin-top: 200px;
+        margin-bottom: 100px;
+    }
+    .passGENall {
+        margin-top: 200px;
+        margin-bottom: 100px;
+    }
+    .menutext {
+        font-size: 17px;
+        margin-bottom: 15px;
+    }
+    .menutext1 {
+        font-size: 22px;
+    }
+    .colorGenAll {
+        margin-top: 200px;
+        margin-bottom: 100px;
+    }
+    .WeatherAll {
+        margin-top: 200px;
+        margin-bottom: 100px;
+    }
+    .allCalc {
+        min-width: 1000px;
+    }
+    .windowCalc {
+        min-width: 750px;
+        padding: 50px;
+        font-size: 30px;
+    }
+    .buttonCalc {
+        padding: 50px 90px;
+        font-size: 30px;
+    }
+    .divBMI {
+        margin-top: 150px;
+        margin-bottom: 100px;
+    }
+    .divTemp {
+        margin-top: 150px;
+        margin-bottom: 100px;
+    }
+    .divSize {
+        margin-top: 150px;
+        margin-bottom: 100px;
+    }
+    .mapAll {
+        margin-top: 200px;
+    }
+    .menu {
+        height: 80px;
+    }
+    .btnmenu {
+        font-size: 50px;
+        margin-left: 30px;
+    }
+    .housebtn {
+        font-size: 40px;
+    }
+    .darkMode {
+        font-size: 40px;
+        margin-left: 40px;
+    }
+    .flag {
+        min-width: 40px;
+        margin-left: -200px;
+        margin-top: 33px;
+    }
+    .hello {
+        font-size: 30px;
+        margin-left: -80px;
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1549px) {
+    .divMainTitle {
+        margin-top: 50px;
+    }
+    .divMainAboutMe {
+        margin-top: 200px;
+    }
+    .imgMe {
+        min-width: 400px;
+        margin-top: 50px;
+    }
+    .aboutMeBtns {
+        margin-top: -50px;
+    }
+    .aboutMeBtn {
+        padding: 5px 20px;
+        font-size: 17px;
+        border-radius: 50px;
+        margin-top: 40px;
+    }
+    .mainTitleText {
+        font-size: 19px;
+        line-height: 45px;
+    }
+    .aboutMeText {
+        font-size: 18px;
+        line-height: 35px;
+    }
+    .link {
+        font-size: 80px;
+    }
+    .aboutMeProgrammingText {
+        font-size: 18px;
+        line-height: 35px;
+        margin-top: -90px;
+    }
+    .skillsTitle {
+        font-size: 27px;
+        margin-bottom: 60px;
+    }
+    .skillsText {
+        font-size: 22px;
+    }
+    .project1 {
+        width: 35%;
+    }
+    .full1 {
+        margin-bottom: -110px;
+    }
+    .MyAppPytext {
+        text-align: center;
+    }
+    .contact {
+        margin-top: 100px;
+    }
+    .contactText,
+    .fa-phone,
+    .fa-envelope {
+    color: #1e1d23;
+    display: inline;
+    font-size: 22px;
+    margin-right: 10px;
+    font-weight: 100;
+    }
+    .downloadCV {
+        margin-top: 200px;
+        margin-bottom: 100px;
+    }
+    .menutext {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+    .menutext1 {
+        font-size: 15px;
+    }
+    .divBMI {
+        margin-top: 60px;
+        margin-bottom: 100px;
+    }
+    .menu {
+        height: 70px;
+    }
+    .btnmenu {
+        font-size: 35px;
+        margin-left: 30px;
+    }
+    .housebtn {
+        font-size: 24px;
+    }
+    .darkMode {
+        font-size: 24px;
+        margin-left: 10px;
+    }
+    .flag {
+        min-width: 20px;
+        margin-left: -200px;
+        margin-top: 29px;
+    }
+    .hello {
+        font-size: 23px;
+        margin-left: -80px;
+        margin-top: 16px;
+    }
+
 }
 
 .darkMode {
@@ -1704,6 +2024,7 @@
 }
 .dark-mode .aboutMeBtn {
     color: white;
+    border-color: white;
 }
 .dark-mode .aboutMeBtn:hover {
     color:#1e1d23;
@@ -1743,6 +2064,9 @@
     color: white;
 }
 .dark-mode .full {
+    color: whitesmoke;
+}
+.dark-mode .full1 {
     color: whitesmoke;
 }
 .dark-mode .MyAppPytitle {
@@ -2013,4 +2337,6 @@
     color: white;
 }
 
-
+.dark-mode .divSize {
+    border: none;
+}

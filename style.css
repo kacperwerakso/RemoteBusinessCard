@@ -1682,10 +1682,10 @@
 
 @media (max-width: 400px) {
     .content { 
-        margin-left: -20px;
+        margin-left: -25px;
     }
     .hello {
-        margin-right: 100px;
+        margin-right: 120px;
     }
     .windowCalc {
         width: 300px;
@@ -1726,6 +1726,9 @@
     .passwordGEN {
         font-size: 23px;
         margin-left: -25px;
+    }
+    .btnmenu {
+        margin-left: -1px;
     }
 
 }

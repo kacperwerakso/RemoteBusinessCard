@@ -1745,7 +1745,7 @@
     }
     .aboutMeBtn {
         padding: 8px 34px;
-        font-size: 26px;
+        font-size: 20px;
         border-radius: 50px;
         margin-top: 40px;
     }
@@ -1806,11 +1806,11 @@
         margin-bottom: 100px;
     }
     .menutext {
-        font-size: 17px;
+        font-size: 16px;
         margin-bottom: 15px;
     }
     .menutext1 {
-        font-size: 22px;
+        font-size: 20px;
     }
     .colorGenAll {
         margin-top: 200px;
@@ -1851,23 +1851,23 @@
         height: 80px;
     }
     .btnmenu {
-        font-size: 50px;
+        font-size: 45px;
         margin-left: 30px;
     }
     .housebtn {
-        font-size: 40px;
+        font-size: 35px;
     }
     .darkMode {
-        font-size: 40px;
+        font-size: 35px;
         margin-left: 40px;
     }
     .flag {
-        min-width: 40px;
+        min-width: 35px;
         margin-left: -200px;
-        margin-top: 33px;
+        margin-top: 31px;
     }
     .hello {
-        font-size: 30px;
+        font-size: 28px;
         margin-left: -80px;
         margin-top: 20px;
     }

@@ -61,43 +61,12 @@
     <div class="currencyAll">
         <p class="currencyTitle">Średnia cena walut na dziś:</p>
         <p class="currentDate"></p><br><br>
-        <input type="text" class="searchInputCurrency" id="searchInput" placeholder="..." oninput="searchCurrencies()"><br><br><br>
+        <input type="text" class="searchInputCurrency" id="searchInput" placeholder="..."><br><br><br>
         <div class='currencies'></div>
     </div><br><br><br><br><br><br><br><br><br><br><br><br>
     <div class="footer">
         <p class="footerText">© 2023 Kacper Werakso</p>
     </div>
-    
-  
-    <script>
-        async function fetchCurrencies() {
-            const url = `https://api.nbp.pl/api/exchangerates/tables/a/today`;
-
-            try {
-                const response = await fetch(url);
-                const data = await response.json();
-                const currencies = data[0].rates;
-
-                const sortedCurrencies = currencies.sort((a, b) => b.popularity - a.popularity);
-
-                const topCurrencies = sortedCurrencies.slice(0, 30);
-                const currenciesContainer = document.querySelector('.currencies');
-
-                currenciesContainer.innerHTML = '';
-
-                topCurrencies.forEach(currency => {
-                const currencyRow = document.createElement('div');
-                currencyRow.innerHTML = `<br><br>${currency.code} <br>1.0 ${currency.currency} = ${currency.mid} zł` + '<br><br>';
-                currenciesContainer.appendChild(currencyRow);
-                });
-            } catch (error) {
-                console.log('Przekroczono limit pobierania danych:', error);
-            }
-            }
-
-            window.addEventListener('load', fetchCurrencies);
-
-    </script>
 
 
     <script src="script.js"></script>     

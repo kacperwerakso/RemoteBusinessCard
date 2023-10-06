@@ -65,7 +65,7 @@
 
         <div class="WeatherAll">
             <p class="WeatherTitle">Wygeneruj losowy cytat</p><br>
-                    <button class="buttonWeather" onclick="generateRandomQuote()"><p>Generuj cytat</p></button><br><br><br>
+                    <button class="buttonWeather" id="quoteBtnGenerate"><p>Generuj cytat</p></button><br><br><br>
                     <p class="warning"></p>
                     <p class="randomQuote"></p><br><br>
 
@@ -79,69 +79,6 @@
 
 
         <script src="script.js"></script>
-    
-
-        <script>
-            const randomQuote = document.querySelector('.randomQuote')
-
-            const facts = [
-                "Będziesz mieć to, na co zasługujesz.<br><br> ~ J.K. Rowling",
-                "Życie nie jest problemem, które trzeba rozwiązywać, lecz rzeczywistością, którą trzeba doświadczać.<br><br> ~ Søren Kierkegaard",
-                "Sukces to nie klucz do szczęścia. Szczęście to klucz do sukcesu. Jeśli kochasz to, co robisz, odniesiesz sukces.<br><br> ~ Albert Schweitzer",
-                "Zacznij tam, gdzie jesteś. Użyj tego, co masz. Zrób to, co możesz.<br><br> ~ Arthur Ashe",
-                "Twoje życie jest ograniczone tylko przez to, w co wierzysz.<br><br> ~ Oprah Winfrey",
-                "Droga do sukcesu to zawsze budowanie mostów, nie murów.<br><br> ~ Zig Ziglar",
-                "Nieznana przyszłość jest lepsza niż przewidywana przyszłość.<br><br> ~ Joel Barker",
-                "Życie to coś, co nam się przydarza, kiedy planujemy coś innego.<br><br> ~ John Lennon",
-                "Nigdy nie jest za późno, aby stać się tym, kim chcesz być.<br><br> ~ George Eliot",
-                "Wszystkie nasze sny mogą się spełnić, jeśli mamy wystarczającą odwagę, aby iść za nimi.<br><br> ~ Walt Disney",
-                "Niech twoje przeszłe błędy staną się twoimi naukowcami, a nie twoimi sędziami.<br><br> ~ Robin Sharma",
-                "Życie jest zbyt krótkie, aby je spędzać na martwieniu się o to, co myślą inni.<br><br> ~ Demi Lovato",
-                "Nigdy nie jesteś za stary, aby wyznaczać nowe cele lub marzyć nowe marzenia.<br><br> ~ C.S. Lewis",
-                "Prawdziwa miara sukcesu to ilość radości, jaką przynosi się innym.<br><br> ~ Dalai Lama",
-                "Najlepszy czas na działanie jest teraz.<br><br> ~ Roy T. Bennett",
-                "Podróż tysiąca mil zaczyna się od jednego kroku.<br><br> ~ Laozi",
-                "Dziękuj za każdy dzień, bo każdy dzień jest cudem.<br><br> ~ Anonymous",
-                "Celem życia jest samo życie w sposób jak najpełniejszy.<br><br> ~ Daisaku Ikeda",
-                "Być sobą to najpiękniejsza rzecz, jaką kiedykolwiek można osiągnąć.<br><br> ~ Zac Efron",
-                "Wszyscy jesteśmy tutaj po to, aby zaistnieć.<br><br> ~ W.H. Auden",
-                "Pamiętaj, aby być zawsze sobą. Świat nie potrzebuje kolejnej kopii.<br><br> ~ Suzy Kassem",
-                "Wiara przenosi góry, ale my musimy je wciąż wspinać.<br><br> ~ David McCullough",
-                "Nie widzimy rzeczy takimi, jakie są; widzimy je takimi, jakimi jesteśmy.<br><br> ~ Anaïs Nin",
-                "Uczysz się więcej w niepowodzeniach niż w sukcesach.<br><br> ~ Jay-Z",
-                "Nigdy nie rezygnuj z marzeń tylko dlatego, że się nie spełniły.<br><br> ~ Mark Twain",
-                "Czasami chodzi o to, by schować lęki do kieszeni i ruszyć naprzód.<br><br> ~ Robert Downey Jr.",
-                "Twoje działania mówią głośniej niż twoje słowa.<br><br> ~ Robin S. Sharma",
-                "Niebo nie jest limitem, umysł jest limitem.<br><br> ~ Usain Bolt",
-                "Życie to nie czekanie na burzę minie, to nauczenie się, jak tańczyć w deszczu.<br><br> ~ Vivian Greene",
-                "Sukces to kwestia podejmowania kolejnych kroków.<br><br> ~ Brian Tracy",
-                "Każdy sukces ma swoje korzenie w odwadze do podjęcia pierwszego kroku.<br><br> ~ Mark Twain",
-                "Jedynym miejscem, gdzie sukces pojawia się przed pracą, to w słowniku.<br><br> ~ Vidal Sassoon",
-                "Najważniejsza podróż to ta, którą odbywamy do siebie samego.<br><br> ~ Walter Riso",
-                "Prawdziwa mądrość polega na tym, że zdajesz sobie sprawę, że nic nie wiesz.<br><br> ~ Socrates",
-                "Twoje myśli kształtują twoje życie.<br><br> ~ Tony Robbins",
-                "Większość sukcesów zaczyna się od postawienia celu.<br><br> ~ Michael Korda",
-                "Życie to nie problem, które trzeba rozwiązać, ale rzeczywistość, którą trzeba doświadczać.<br><br> ~ Søren Kierkegaard",
-                "Zacznij tam, gdzie jesteś. Użyj tego, co masz. Zrób to, co możesz.<br><br> ~ Arthur Ashe",
-                "Twoje życie jest ograniczone tylko przez to, w co wierzysz.<br><br> ~ Oprah Winfrey",
-                "Droga do sukcesu to zawsze budowanie mostów, nie murów.<br><br> ~ Zig Ziglar",
-                "Nieznana przyszłość jest lepsza niż przewidywana przyszłość.<br><br> ~ Joel Barker",
-                "Życie to coś, co nam się przydarza, kiedy planujemy coś innego.<br><br> ~ John Lennon",
-                "Nigdy nie jest za późno, aby stać się tym, kim chcesz być.<br><br> ~ George Eliot",
-                "Wszystkie nasze sny mogą się spełnić, jeśli mamy wystarczającą odwagę, aby iść za nimi.<br><br> ~ Walt Disney",
-                "Niech twoje przeszłe błędy staną się twoimi naukowcami, a nie twoimi sędziami.<br><br> ~ Robin Sharma",
-                "Życie jest zbyt krótkie, aby je spędzać na martwieniu się o to, co myślą inni.<br><br> ~ Demi Lovato",
-                "Nigdy nie jesteś za stary, aby wyznaczać nowe cele lub marzyć nowe marzenia.<br><br> ~ C.S. Lewis",
-            ]
-
-            function generateRandomQuote() {
-                const randomQuoteElement = document.querySelector('.randomQuote');
-                const randomNumber = Math.floor(Math.random() * facts.length);
-                randomQuoteElement.innerHTML = facts[randomNumber];
-            }
-
-        </script>
-        
         <script src="https://kit.fontawesome.com/34c494935b.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
         

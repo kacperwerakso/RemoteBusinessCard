@@ -61,45 +61,14 @@
     </div><br>
         <div class="colorGenAll"><br>
             <p class="colorTitle">Wygeneruj losowy kolor, kliknij go aby skopiować</p><br>
-            <button class="btnGenerate" onclick="generateColor()"><p>Generuj kolor</p></button><br><br>
-            <div class="color-box" id="color-box" onclick="copyColor()"></div><br>
+            <button class="btnGenerate" id="btnGenerateColor"><p>Generuj kolor</p></button><br><br>
+            <div class="color-box" id="color-box"></div><br>
             <div class="copied-msg" id="copied-msg"></div>
           </div><br><br><br><br>
           
           <div class="footer">
             <p class="footerText">© 2023 Kacper Werakso</p>
           </div>
-          
-          <script>
-            function generateColor() {
-                let red = Math.floor(Math.random() * 256);
-                let green = Math.floor(Math.random() * 256);
-                let blue = Math.floor(Math.random() * 256);
-            
-                let colorBox = document.getElementById("color-box");
-                colorBox.style.backgroundColor = "rgb(" + red + ", " + green + ", " + blue + ")";
-            
-                let copiedMsg = document.getElementById("copied-msg");
-                copiedMsg.textContent = "";
-            
-                colorBox.setAttribute("data-color", "rgb(" + red + ", " + green + ", " + blue + ")");
-            }
-          
-            function copyColor() {
-                let colorBox = document.getElementById("color-box");
-                let colorValue = colorBox.getAttribute("data-color");
-                let textarea = document.createElement("textarea");
-                textarea.value = colorValue;
-                document.body.appendChild(textarea);
-                textarea.select();
-                document.execCommand("copy");
-                document.body.removeChild(textarea);
-            
-                let copiedMsg = document.getElementById("copied-msg");
-                copiedMsg.textContent = "✅";
-            }
-          </script>
-          
           
 
         <script src="script.js"></script>

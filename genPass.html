@@ -61,45 +61,14 @@
 
     <div class="passGENall">
         <p class="passTitle">Kliknij w przycisk a otrzymasz skąplikowane hasło, kliknij je aby skopiować</p><br>
-        <button class="btnGenerate" onclick="generatePassword()"><p>Generuj hasło</p></button><br><br><br><br>
-        <p class="passwordGEN" id="password" onclick="copyPassword()"></p><br>
+        <button class="btnGenerate"><p>Generuj hasło</p></button><br><br><br><br>
+        <p class="passwordGEN" id="password"></p><br>
         <p class="copied-msg1" id="copied-msg">✅</p>
     </div><br><br><br><br><br>
     
     <div class="footer">
         <p class="footerText">© 2023 Kacper Werakso</p>
     </div>
-    
-    <script>
-        function generatePassword() {
-            let chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_=+';
-            let password = '';
-            let passwordLength = 20;
-    
-            for (let i = 0; i < passwordLength; i++) {
-                let randomIndex = Math.floor(Math.random() * chars.length);
-                password += chars.charAt(randomIndex);
-            }
-    
-            let passwordElement = document.getElementById('password');
-            passwordElement.textContent = password;
-            passwordElement.classList.add('copyable');
-            document.getElementById('copied-msg').style.display = 'none';
-        }
-    
-        function copyPassword() {
-            let passwordElement = document.getElementById('password');
-            let password = passwordElement.textContent;
-            let textarea = document.createElement("textarea");
-            textarea.value = password;
-            document.body.appendChild(textarea);
-            textarea.select();
-            document.execCommand("copy");
-            document.body.removeChild(textarea);
-    
-            document.getElementById('copied-msg').style.display = 'block';
-        }
-    </script>
 
     <script src="script.js"></script>    
     <script src="https://kit.fontawesome.com/34c494935b.js" crossorigin="anonymous"></script>

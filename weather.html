@@ -81,52 +81,8 @@
         </div>
         <script src="./script.js"></script>
         <script>
-            const inputWeather = document.querySelector('.inputWeather');
-            const buttonWeather = document.querySelector('.buttonWeather');
-            const cityName = document.querySelector('.city-name');
-            const warning = document.querySelector('.warning');
-            const photo = document.querySelector('.photo');
-            const weather = document.querySelector('.weather');
-            const temperature = document.querySelector('.temperature');
-            const humidity = document.querySelector('.humidity');
-            const authorWeather = document.querySelector('.authorWeather');
 
-            const API_LINK = 'https://api.openweathermap.org/data/2.5/weather?q=';
-            const API_KEY = '&appid=2854093abbef63b9ca5ed8d664ef6e71';
-            const API_UNITS = '&units=metric';
-            const API_LANG = '&lang=pl';
 
-            const getWeather = async () => {
-                const city = inputWeather.value || 'Polska';
-                const URL = API_LINK + city + API_KEY + API_UNITS + API_LANG;
-
-                try {
-                    const res = await axios.get(URL);
-                    console.log(res.data);
-                    const temp = res.data.main.temp;
-                    const hum = res.data.main.humidity;
-                    const status = Object.assign({}, ...res.data.weather);
-
-                    warning.textContent = '';
-                    inputWeather.value = '';
-
-                    cityName.innerHTML = '<br><br>' + res.data.name + '<br><br><br>';
-                    temperature.innerHTML = 'Temperatura' + '<br><br>' + Math.floor(temp) + '℃' + '<br><br>';
-                    humidity.innerHTML = 'Wilgotność' + '<br><br>' + hum + '%' + '<br><br>';
-                    authorWeather.innerHTML = 'Autorem danych jest' + '<br>' + '<a href="https://openweathermap.org/" target="_blank" style="text-decoration: none; color: #1e1d23;">https://openweathermap.org/</a>' + '<br><br>';
-                } catch (error) {
-                    warning.innerHTML = 'Nieprawidłowa nazwa miasta';
-                }
-            };
-
-            const enderCheck = e => {
-                if (e.key === 'Enter') {
-                    getWeather();
-                }
-            };
-
-            inputWeather.addEventListener('keyup', enderCheck);
-            buttonWeather.addEventListener('click', getWeather);
         </script>
 
 

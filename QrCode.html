@@ -71,19 +71,6 @@
         </div>
 
         <script src="script.js"></script>
-        <script>
-            const generateQRButton = document.querySelector('.generateQRCode');
-            generateQRButton.addEventListener('click', function() {
-                const content = document.querySelector(".content").value;
-                if (content !== '') {
-                    const qr = new QRious({
-                        element: document.querySelector(".qrcode"),
-                        value: content,
-                        size: 200
-                    });
-                }
-            });
-        </script>
         <script src="https://kit.fontawesome.com/34c494935b.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
     

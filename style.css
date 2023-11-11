@@ -16,9 +16,14 @@
     z-index: 99;
 }
 
+#inProgress {
+    margin-top: -20px;
+}
+
 
 .body {
 	font-family: 'Open Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
 	color: #fff;
 	background-color: white;
     font-size: 24px;
@@ -353,6 +358,7 @@
     font-weight: 540;
     margin-bottom: 40px;
     font-size: 25px;
+    white-space: nowrap;
 }
 
 .skillsText {
@@ -1730,6 +1736,9 @@
     .btnmenu {
         margin-left: -1px;
     }
+    .project1 {
+        width: 66%;
+    }
 
 }
 
@@ -1739,9 +1748,10 @@
     }
     .divMainAboutMe {
         margin-top: 200px;
+        margin-left: 250px;
     }
     .imgMe {
-        min-width: 600px;
+        min-width: 500px;
     }
     .aboutMeBtn {
         padding: 8px 34px;
@@ -1750,27 +1760,27 @@
         margin-top: 40px;
     }
     .mainTitleText {
-        font-size: 25px;
+        font-size: 24px;
         line-height: 50px;
     }
     .aboutMeText {
-        font-size: 25px;
+        font-size: 22px;
         line-height: 45px;
     }
     .link {
         font-size: 130px;
     }
     .aboutMeProgrammingText {
-        font-size: 25px;
+        font-size: 23px;
         line-height: 45px;
-        margin-top: 10px;
+        margin-top: 100px;
     }
     .skillsTitle {
-        font-size: 35px;
+        font-size: 33px;
         margin-bottom: 80px;
     }
     .skillsText {
-        font-size: 30px;
+        font-size: 27px;
     }
     .project1 {
         width: 35%;
@@ -1882,7 +1892,6 @@
     }
     .imgMe {
         min-width: 400px;
-        margin-top: 50px;
     }
     .aboutMeBtns {
         margin-top: -50px;

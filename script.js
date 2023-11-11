@@ -75,13 +75,6 @@ function showFirstText2() {
     }
 }
 
-window.addEventListener('DOMContentLoaded', function() {
-    setTimeout(showFirstText1, 250);
-});
-window.addEventListener('DOMContentLoaded', function() {
-    setTimeout(showFirstText2, 500);
-});
-
 function copyContent(event) {
     let paragraph = event.currentTarget;
     let content = paragraph.textContent;
@@ -119,29 +112,6 @@ buttonIds.forEach(buttonId => {
     }
 });
 
-
-document.addEventListener('DOMContentLoaded', function() {
-    if (generateQRButton) {
-        generateQRButton.addEventListener('click', function() {
-            const content = document.querySelector(".content").value;
-            if (content !== '') {
-                const qr = new QRious({
-                element: document.querySelector(".qrcode"),
-                value: content,
-                size: 200
-                });
-            }
-        })
-    }
-})
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    if (calculateBtn) {
-    calculateBtn.addEventListener('click', calculateBMI);
-    }
-})
-
 function generatePassword() {
     let chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_=+';
     let password = '';
@@ -172,13 +142,6 @@ function copyPassword() {
     document.getElementById('copied-msg').style.display = 'block';
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    if (btnGenerate && passwordGEN) {
-    btnGenerate.addEventListener('click', generatePassword)
-    passwordGEN.addEventListener('click', copyPassword)
-    }
-})
-
 
 function generateColor() {
     let red = Math.floor(Math.random() * 256);
@@ -208,12 +171,6 @@ function copyColor() {
     copiedMsg.textContent = "✅";
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    if (btnGenerateColor && colorBox) {
-    btnGenerateColor.addEventListener('click', generateColor)      
-    colorBox.addEventListener('click', copyColor)
-    }
-})
 
 const facts = [
     "Będziesz mieć to, na co zasługujesz.<br><br> ~ J.K. Rowling",
@@ -271,13 +228,6 @@ function generateRandomQuote() {
     randomQuoteElement.innerHTML = facts[randomNumber];
 }
 
-
-document.addEventListener('DOMContentLoaded', function() {
-    if (quoteBtnGenerate) {
-    quoteBtnGenerate.addEventListener('click', generateRandomQuote)
-    }
-})
-
 const facts1 = [
     "Najmniejszy kość ludzkiego to strzemiączko w uchu, ma około 0,1 cm długości.",
     "Kleopatra VII była bardziej starożytna od piramid w Gizie.",
@@ -327,13 +277,6 @@ function generateRandomCuriosity() {
     const randomNumber = Math.floor(Math.random() * facts1.length);
     randomQuoteElement.innerHTML = facts1[randomNumber];
 }
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    if (curGenBtn) {
-    curGenBtn.addEventListener('click', generateRandomCuriosity)
-    }
-})
 
 btnsCalc.forEach((button) => {
     button.addEventListener('click', (e) => calculate(e.target.dataset.value))
@@ -426,16 +369,6 @@ function calculateKCAL() {
 
     answerKCAL.innerHTML = `Twoje dzienne zapotrzebowanie kaloryczne wynosi: ${kcal.toFixed(2)} kcal.`;
 }
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    if (btnKCAL) {
-    btnKCAL.addEventListener('click', calculateKCAL)
-    }
-})
-
-
-
 
 let isEnglish = sessionStorage.getItem("isEnglish") === "true";
 
@@ -540,13 +473,6 @@ function generateQRCode() {
 document.addEventListener('keydown', handleKeyDown);
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    if (menuBtn) {
-        menuBtn.addEventListener('click', showNav);
-    }
-})
-
-
 function calculate(btnValue) {
     if (btnValue === '=' && btnValue !== '') {
         try {
@@ -630,19 +556,6 @@ function fun3() {
 }
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    if (btn1 && btn2 && btn3 && btn4 && rel) {
-    btn1.classList.add('hide')
-    btn1.addEventListener('click', fun1)
-    btn2.addEventListener('click', fun2)
-    btn3.addEventListener('click', fun3)
-    btn4.addEventListener('click', fun4)
-    rel.addEventListener('click', relfun)
-    }
-})
-
-
-
 function relfunSize() {
     if (count === 0) {
         winSize.placeholder = 'Ft';
@@ -701,18 +614,6 @@ function fun4Size() {
     winSize.value = ''
 }
 
-
-document.addEventListener('DOMContentLoaded', function() {
-    if (btn1Size && btn2Size && btn3Size && btn4Size && relSize) {
-        btn1Size.classList.add('hide')
-        btn1Size.addEventListener('click', fun1Size)
-        btn2Size.addEventListener('click', fun2Size)
-        btn3Size.addEventListener('click', fun3Size)
-        btn4Size.addEventListener('click', fun4Size)
-        relSize.addEventListener('click', relfunSize)
-    }
-})
-
 async function fetchCurrencies() {
     const url = `https://api.nbp.pl/api/exchangerates/tables/a/today`;
 
@@ -753,13 +654,6 @@ function searchCurrencies() {
 }
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    if (searchInputCurrency) {
-    searchInputCurrency.addEventListener('input', searchCurrencies)
-    }
-})
-
-
 window.addEventListener('load', fetchCurrencies);
 
 
@@ -796,12 +690,6 @@ function searchCryptocurrencies() {
         }
     }
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-    if (searchInput1) {
-        searchInput1.addEventListener('input', searchCryptocurrencies)
-    }
-})
 
 
 let inputWeather = document.querySelector('.inputWeather');
@@ -849,17 +737,6 @@ const enderCheck = e => {
 };
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    if (inputWeather && buttonWeather) {
-        inputWeather.addEventListener('keyup', enderCheck);
-        buttonWeather.addEventListener('click', getWeather);
-    }
-})
-
-
-
-
-
 let darkModeButton = document.querySelector('.darkMode');
 let bodyElement = document.body;
 let isDarkModeEnabled = localStorage.getItem('darkMode') === 'true';
@@ -871,11 +748,76 @@ function toggleDarkMode() {
     localStorage.setItem('darkMode', newDarkModeState.toString());
 }
 
-    if (isDarkModeEnabled) {
-        toggleDarkMode();
+if (isDarkModeEnabled) {
+    toggleDarkMode();
+}
+
+window.addEventListener('DOMContentLoaded', function() {
+    setTimeout(showFirstText1, 250);
+    setTimeout(showFirstText2, 500);
+    if (generateQRButton) {
+        generateQRButton.addEventListener('click', function() {
+            const content = document.querySelector(".content").value;
+            if (content !== '') {
+                const qr = new QRious({
+                element: document.querySelector(".qrcode"),
+                value: content,
+                size: 200
+                });
+            }
+        })
     }
-
-
-document.addEventListener('DOMContentLoaded', function() {
+    if (calculateBtn) {
+        calculateBtn.addEventListener('click', calculateBMI);
+    }
+    if (btnGenerate && passwordGEN) {
+        btnGenerate.addEventListener('click', generatePassword)
+        passwordGEN.addEventListener('click', copyPassword)
+    }
+    if (btnGenerateColor && colorBox) {
+        btnGenerateColor.addEventListener('click', generateColor)      
+        colorBox.addEventListener('click', copyColor)
+    }
+    if (quoteBtnGenerate) {
+        quoteBtnGenerate.addEventListener('click', generateRandomQuote)
+    }
+    if (curGenBtn) {
+        curGenBtn.addEventListener('click', generateRandomCuriosity)
+    }
+    if (btnKCAL) {
+        btnKCAL.addEventListener('click', calculateKCAL)
+    }
+    if (menuBtn) {
+        menuBtn.addEventListener('click', showNav);
+    }
+    if (btn1Size && btn2Size && btn3Size && btn4Size && relSize) {
+        btn1Size.classList.add('hide')
+        btn1Size.addEventListener('click', fun1Size)
+        btn2Size.addEventListener('click', fun2Size)
+        btn3Size.addEventListener('click', fun3Size)
+        btn4Size.addEventListener('click', fun4Size)
+        relSize.addEventListener('click', relfunSize)
+    }
+    if (searchInput1) {
+        searchInput1.addEventListener('input', searchCryptocurrencies)
+    }
+    if (btn1 && btn2 && btn3 && btn4 && rel) {
+        btn1.classList.add('hide')
+        btn1.addEventListener('click', fun1)
+        btn2.addEventListener('click', fun2)
+        btn3.addEventListener('click', fun3)
+        btn4.addEventListener('click', fun4)
+        rel.addEventListener('click', relfun)
+    }
+    if (searchInputCurrency) {
+        searchInputCurrency.addEventListener('input', searchCurrencies)
+    }
+    if (inputWeather && buttonWeather) {
+        inputWeather.addEventListener('keyup', enderCheck);
+        buttonWeather.addEventListener('click', getWeather);
+    }
     darkModeButton.addEventListener('click', toggleDarkMode);
-})
+});
+
+
+

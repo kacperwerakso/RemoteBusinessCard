@@ -366,6 +366,27 @@
     font-size: 20px;
 }
 
+.skillsListSecond {
+    color: white;
+    display: grid;
+    text-align: center;
+    padding: 8%;
+    background-color: #1e1d23;
+
+}
+
+.skillsTitleSecond {
+    font-weight: 540;
+    margin-bottom: 40px;
+    font-size: 25px;
+    
+}
+
+.skillsTextSecond {
+    font-weight: 100;
+    font-size: 20px;
+}
+
 .contact {
     color: #1e1d23;
     text-align: start;
@@ -2067,6 +2088,9 @@
     color: white;
 }
 .dark-mode .skillsList {
+    background-color:#111113;
+}
+.dark-mode .skillsListSecond {
     background-color:#111113;
 }
 .dark-mode .greyBackground {
